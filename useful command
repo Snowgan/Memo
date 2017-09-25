@@ -1,0 +1,3 @@
+
+// get list of global installed package
+npm list -g --depth=0

@@ -32,8 +32,4 @@ console.log(arr.__proto__ === Array.prototype);  // true
 console.log(Array.prototype.__proto__ === Object.prototype);  // true
 console.log(Array.prototype.constructor === Array);  // true
 ```
-
-![prototype_1](/Snowgan/Memo/master/object_prototype.PNG)
-
-
-
+<img src="https://github.com/Snowgan/Memo/blob/master/object_prototype.PNG" width="450">

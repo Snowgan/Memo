@@ -24,7 +24,7 @@ Every function in Javascript has a property named 'prototype'. And this property
 
 So when the function is called as a constructor, the function property 'prototype' will be assigned as the prototype of the instance created by the constructor
 
-#### __proto__
+#### \__proto\__
 
 The prototype can be accessed by __proto__ property, but it's not a standard property and depends on browsers' implement.
 

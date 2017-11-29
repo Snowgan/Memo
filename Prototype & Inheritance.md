@@ -33,7 +33,7 @@ console.log(Array.prototype.__proto__ === Object.prototype);  // true
 console.log(Array.prototype.constructor === Array);  // true
 ```
 
-
+![prototype_1](/Snowgan/Memo/master/object_prototype.PNG)
 
 
 

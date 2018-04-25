@@ -1,0 +1,16 @@
+Before touch koa, we need to learn how the async/await work
+
+initial a server
+
+const koa = require('koa');
+const app = new koa();
+
+parse request's body
+
+const koa = require('koa');
+const bodyParser = require('koa-bodyparser');
+const app = new koa();
+
+app.use(bodyParser());
+
+solve cors

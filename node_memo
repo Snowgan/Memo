@@ -12,3 +12,36 @@ Stream
 Child_process
 1. Node.js Child Processes: Everything you need to know
    https://medium.freecodecamp.org/node-js-child-processes-everything-you-need-to-know-e69498fe970a
+
+
+const http = require('http');
+const Koa = require('koa');
+const { spawn } = require('child_process');
+
+const app = new Koa();
+const server = http.createServer(app.callback());
+const io = require('socket.io')(server);
+
+
+io.on('connection', (socket) => {
+  socket.on('runTest', (data) => {
+    console.log('run test');
+    const child = spawn('npm', ['test']);
+    let chunk;
+    // while (null !== (chunk = child.stdout.read())) {
+    //   console.log(chunk);
+    // }
+    child.stdout.on('data', (data) => {
+      // console.log(data.toString());
+      socket.emit('result', data.toString());
+    })
+  })
+})
+
+
+
+// app.use(async ctx => {
+//   ctx.body = 'Hello World';
+// });
+
+server.listen(3000);
